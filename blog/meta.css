@@ -1,0 +1,672 @@
+/* =====================================
+   BLOG LIZ - PAGINA DE METAS
+   ===================================== */
+
+:root {
+  --fondo: #fcf8f4;
+  --crema: #f5ebe4;
+  --rosa: #ead1cb;
+  --rosa-claro: #f7e8e5;
+  --rosa-oscuro: #a16f72;
+  --texto: #172438;
+  --secundario: #414650;
+  --borde: #e8ddd6;
+  --blanco: #fffdfa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== ENCABEZADO ===== */
+
+.encabezado {
+  min-height: 72px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1.15;
+}
+
+.logo span {
+  font-size: 36px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.logo small {
+  margin-top: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu a {
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-size: 15px;
+  transition: background 0.25s;
+}
+
+.menu a:hover,
+.menu a.activo {
+  background: var(--rosa);
+}
+
+.iconos {
+  display: flex;
+  gap: 18px;
+  font-size: 25px;
+}
+
+/* ===== PORTADA ===== */
+
+.portada {
+  min-height: 315px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  background: #f4e9e1;
+  overflow: hidden;
+}
+
+.portada-texto {
+  padding: 28px 8%;
+  align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.etiqueta {
+  display: block;
+  margin-bottom: 7px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.portada h1 {
+  margin-bottom: 12px;
+  font-size: clamp(29px, 3vw, 43px);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.portada h1 span {
+  color: var(--rosa-oscuro);
+}
+
+.portada-texto > p {
+  max-width: 460px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: white;
+  background: var(--rosa-oscuro);
+  transition: background 0.25s, transform 0.25s;
+}
+
+.boton:hover {
+  background: #86575e;
+  transform: translateY(-2px);
+}
+
+.portada-imagen {
+  min-height: 315px;
+}
+
+.portada-imagen img {
+  height: 100%;
+  min-height: 315px;
+}
+
+/* ===== CONTENIDO ===== */
+
+.contenido {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 22px 3.2%;
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(240px, 1.05fr);
+  gap: 25px;
+}
+
+.area-metas > h2 {
+  margin-bottom: 16px;
+  font-size: 31px;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+/* ===== CINCO TARJETAS ===== */
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.tarjeta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 13px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: #fffdfa99;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px #5c3f3010;
+}
+
+.icono {
+  width: 59px;
+  height: 59px;
+  margin-bottom: 9px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 29px;
+  color: var(--texto);
+}
+
+.rosa {
+  background: #e9cecd;
+}
+
+.arena {
+  background: #f1dfcc;
+}
+
+.lila {
+  background: #e5d9ee;
+}
+
+.verde {
+  background: #dce7dc;
+}
+
+.durazno {
+  background: #f8d8c9;
+}
+
+.tarjeta h3 {
+  margin-bottom: 5px;
+  font-size: clamp(16px, 1.35vw, 21px);
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.tarjeta > p {
+  min-height: 87px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ===== BARRAS DE PROGRESO ===== */
+
+.progreso {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 4px 0 12px;
+}
+
+.barra {
+  height: 9px;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eee7e2;
+}
+
+.barra span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--rosa-oscuro);
+}
+
+.tarjeta:nth-child(2) .barra span {
+  background: #b99b83;
+}
+
+.tarjeta:nth-child(3) .barra span {
+  background: #9d8bbb;
+}
+
+.tarjeta:nth-child(4) .barra span {
+  background: #829c91;
+}
+
+.tarjeta:nth-child(5) .barra span {
+  background: #e7a28a;
+}
+
+.progreso small {
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+/* ===== LISTAS DE TAREAS ===== */
+
+.tareas {
+  width: 100%;
+  margin-bottom: 14px;
+  list-style: none;
+}
+
+.tareas li {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 17px;
+  color: #454b54;
+  font-size: 11.5px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.tareas li::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a8a09b;
+  font-size: 14px;
+}
+
+.tareas li.hecha::before {
+  content: "✓";
+  color: var(--texto);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.boton-tarjeta {
+  width: 100%;
+  margin-top: auto;
+  padding: 8px 4px;
+  border-radius: 16px;
+  background: var(--rosa-claro);
+  text-align: center;
+  font-size: 12px;
+  transition: background 0.25s;
+}
+
+.boton-tarjeta:hover {
+  background: var(--rosa);
+}
+
+/* ===== BARRA LATERAL ===== */
+
+.barra-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imagen-frase {
+  height: 162px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--rosa);
+}
+
+.imagen-frase > img {
+  width: 100%;
+  height: 100%;
+}
+
+.texto-frase {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5e3dc22;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.45;
+  text-shadow: 0 1px 8px #ffffffa0;
+}
+
+.texto-frase span {
+  font-size: 24px;
+}
+
+/* Lista lateral */
+
+.panel {
+  padding: 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: #fffdfa99;
+}
+
+.panel h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.panel ol {
+  padding-left: 22px;
+}
+
+.panel li {
+  margin-bottom: 4px;
+  padding-left: 2px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Mensaje motivador */
+
+.mensaje {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--rosa-claro);
+}
+
+.hoja {
+  color: var(--rosa-oscuro);
+  font-size: 34px;
+}
+
+.mensaje p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mensaje p span {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* ===== FRANJA INFERIOR ===== */
+
+.franja-final {
+  min-height: 120px;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #f1dfdb;
+}
+
+.frase-pie {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.frase-pie span {
+  display: block;
+  text-align: center;
+  color: var(--rosa-oscuro);
+  font-size: 23px;
+}
+
+.recordatorios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recordatorios > div {
+  min-width: 90px;
+  padding: 0 16px;
+  border-right: 1px solid #cbb0a9;
+  text-align: center;
+}
+
+.recordatorios > div:last-child {
+  border-right: none;
+}
+
+.recordatorios > div > span {
+  font-size: 25px;
+}
+
+.recordatorios p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.boton-final {
+  min-width: 170px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 19px;
+  font-style: italic;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 1200px) {
+  .contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tarjeta h3 {
+    font-size: 20px;
+  }
+
+  .tarjeta > p {
+    min-height: auto;
+  }
+
+  .tareas li {
+    font-size: 13px;
+  }
+
+  .barra-lateral {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .imagen-frase {
+    height: 100%;
+    min-height: 170px;
+  }
+
+  .franja-final {
+    justify-content: center;
+  }
+}
+
+/* ===== CELULARES ===== */
+
+@media (max-width: 650px) {
+  .encabezado {
+    flex-direction: column;
+    padding: 14px 10px;
+    gap: 12px;
+  }
+
+  .logo span {
+    font-size: 31px;
+  }
+
+  .menu {
+    gap: 3px;
+  }
+
+  .menu a {
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+
+  .iconos {
+    display: none;
+  }
+
+  .portada {
+    grid-template-columns: 1fr;
+  }
+
+  .portada-texto {
+    padding: 28px 22px;
+  }
+
+  .portada h1 {
+    font-size: 34px;
+  }
+
+  .portada-imagen,
+  .portada-imagen img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .contenido {
+    padding: 25px 15px;
+    gap: 22px;
+  }
+
+  .area-metas > h2 {
+    font-size: 28px;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .tarjeta {
+    padding: 18px;
+  }
+
+  .tarjeta h3 {
+    font-size: 21px;
+  }
+
+  .tarjeta > p {
+    min-height: auto;
+    font-size: 14px;
+  }
+
+  .tareas li {
+    font-size: 13px;
+  }
+
+  .progreso {
+    margin: 8px 0 14px;
+  }
+
+  .boton-tarjeta {
+    margin-top: 5px;
+    padding: 11px;
+  }
+
+  .barra-lateral {
+    display: flex;
+  }
+
+  .imagen-frase {
+    height: 200px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .panel li {
+    font-size: 14px;
+  }
+
+  .franja-final {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 12px;
+  }
+
+  .recordatorios {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recordatorios > div {
+    min-width: 0;
+    flex: 1;
+    padding: 0 8px;
+  }
+
+  .recordatorios p {
+    font-size: 11px;
+  }
+
+  .boton-final {
+    width: 80%;
+  }
+}

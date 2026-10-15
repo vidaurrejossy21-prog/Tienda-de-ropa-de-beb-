@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pequeños Encantos | Ropita que abraza sus primeros momentos</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="top-header">
+  <div class="logo"><div class="logo-icon">🧸</div><div class="logo-text"><h1>Pequeños Encantos</h1><span>Ropita que abraza sus primeros momentos ♥</span></div></div>
+  <nav class="menu">
+    <a onclick="mostrar('inicio')" class="nav-item activo" id="btn-inicio"><span>🏠</span> INICIO</a>
+    <a onclick="mostrar('productos')" class="nav-item" id="btn-productos"><span>👕</span> PRODUCTOS</a>
+    <a onclick="mostrar('accesorios')" class="nav-item" id="btn-accesorios"><span>🎀</span> ACCESORIOS</a>
+    <a onclick="mostrar('ofertas')" class="nav-item" id="btn-ofertas"><span>🏷️</span> OFERTAS</a>
+    <a onclick="mostrar('nosotros')" class="nav-item" id="btn-nosotros"><span>👥</span> NOSOTROS</a>
+    <a onclick="mostrar('contacto')" class="nav-item" id="btn-contacto"><span>📞</span> CONTACTO</a>
+  </nav>
+  <a class="whatsapp-btn" href="https://wa.me/51908997938" target="_blank">💬 WhatsApp<br>908 997 938</a>
+</header>
+
+<div id="inicio" class="seccion-tab activa">
+  <section class="hero"><div class="hero-left"><p>Bienvenidos a</p><h1 class="brand">Pequeños<br>Encantos</h1><p class="desc">Somos un emprendimiento dedicado a ofrecer ropa y accesorios para bebés, buscando combinar <b>comodidad, calidad y diseños tiernos</b> para los más pequeños.</p><div class="hero-btns"><button class="btn-rosa" onclick="mostrar('productos')">🛍️ VER PRODUCTOS</button><button class="btn-blanco" onclick="mostrar('ofertas')">🏷️ VER OFERTAS</button></div></div><div class="hero-right"><img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?w=800"></div></section>
+  <div class="features"><div class="feat"><span>☁️</span><b>Ropa cómoda<br>y segura</b></div><div class="feat"><span>🎁</span><b>Diseños tiernos<br>y modernos</b></div><div class="feat"><span>🛡️</span><b>Calidad que<br>te da confianza</b></div><div class="feat"><span>🚚</span><b>Envíos rápidos<br>a todo Lima</b></div><div class="feat"><span>💗</span><b>Hecho con amor<br>para tu bebé</b></div></div>
+  <h3 class="titulo-dest">♥ Productos destacados ♥</h3>
+  <div class="productos-grid">
+    <div class="card"><span class="fav">💗</span><div class="img-box"><img src="imagenes/8.png"></div><h4>Body Osito</h4><div class="precio">S/ 25.00</div><button onclick="mostrar('productos')">VER MÁS ></button></div>
+    <div class="card"><span class="fav">💗</span><div class="img-box"><img src="imagenes/6.png"></div><h4>Conjunto Rayas</h4><div class="precio">S/ 45.00</div><button onclick="mostrar('productos')">VER MÁS ></button></div>
+    <div class="card"><span class="fav">💗</span><div class="img-box"><img src="imagenes/5.png"></div><h4>Vestido Flores</h4><div class="precio">S/ 50.00</div><button onclick="mostrar('productos')">VER MÁS ></button></div>
+    <div class="card"><span class="fav">💗</span><div class="img-box"><img src="imagenes/7.png"></div><h4>Pijama Ositos</h4><div class="precio">S/ 40.00</div><button onclick="mostrar('productos')">VER MÁS ></button></div>
+  </div>
+  <div class="footer-pink"><div class="fp"><span>💗</span><p>Complementos que abrazan<br><b>sus primeros momentos 🧡</b></p></div><div class="fp"><span>🧸</span><p>Productos de calidad<br>para tu bebé</p></div><div class="fp"><span>🔒</span><p>Compra segura<br>y protegida</p></div><div class="fp"><span>🚚</span><p>Envíos rápidos<br>a todo Lima</p></div><div class="fp"><span>❤️</span><p>Atención<br>personalizada</p></div></div>
+</div>
+
+<div id="productos" class="seccion-tab">
+  <h2 class="titulo-coleccion">Nuestra Colección Completa 🧸</h2><p class="sub">Descubre nuestra selección de prendas suaves y tiernas para tu bebé.</p>
+  <div class="filtros-bar"><div class="filtros-left"><b>Filtros:</b><select><option>🧩 Bodys, Conjuntos, Vestidos</option></select><select><option>👶 Tallas</option></select></div><div class="buscar-box"><input id="buscadorProd" placeholder="Buscar" onkeyup="filtrarProd()"><span>🔍</span></div></div>
+  <div class="productos-grid" id="gridProductos">
+    <div class="card" data-nombre="body osito"><span class="fav">💗</span><div class="img-box"><img src="imagenes/8.png"></div><h4>Body Osito</h4><div class="precio">S/ 25.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="conjunto rayas"><span class="fav">💗</span><div class="img-box"><img src="imagenes/6.png"></div><h4>Conjunto Rayas</h4><div class="precio">S/ 45.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="vestido flores"><span class="fav">💗</span><div class="img-box"><img src="imagenes/5.png"></div><h4>Vestido Flores</h4><div class="precio">S/ 50.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="pijama ositos"><span class="fav">💗</span><div class="img-box"><img src="imagenes/7.png"></div><h4>Pijama Ositos</h4><div class="precio">S/ 40.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="body estrella azul"><span class="fav">💗</span><div class="img-box"><img src="imagenes/1.png"></div><h4>Body Estrella Azul</h4><div class="precio">S/ 26.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="conjunto punto rosa"><span class="fav">💗</span><div class="img-box"><img src="imagenes/2.png"></div><h4>Conjunto Punto Rosa</h4><div class="precio">S/ 48.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="pelele gato gris"><span class="fav">💗</span><div class="img-box"><img src="imagenes/3.png"></div><h4>Pelele Gato Gris</h4><div class="precio">S/ 35.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="vestido vichy"><span class="fav">💗</span><div class="img-box"><img src="imagenes/4.png"></div><h4>Vestido Vichy</h4><div class="precio">S/ 52.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="set baberos"><span class="fav">💗</span><div class="img-box"><img src="imagenes/babero.png"></div><h4>Set Baberos (x3)</h4><div class="precio">S/ 22.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="conjunto deporte oso"><span class="fav">💗</span><div class="img-box"><img src="imagenes/conjunto oso.png"></div><h4>Conjunto Deporte Oso</h4><div class="precio">S/ 55.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="ranita algodon"><span class="fav">💗</span><div class="img-box"><img src="imagenes/boody verde.png"></div><h4>Ranita Algodón</h4><div class="precio">S/ 28.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="pijama mariposas"><span class="fav">💗</span><div class="img-box"><img src="imagenes/enterizo.png"></div><h4>Pijama Mariposas</h4><div class="precio">S/ 42.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="set medias"><span class="fav">💗</span><div class="img-box"><img src="imagenes/medias.png"></div><h4>Set Medias (x4)</h4><div class="precio">S/ 18.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="conjunto jirafa"><span class="fav">💗</span><div class="img-box"><img src="imagenes/conjunto jirafa.png"></div><h4>Conjunto Jirafa</h4><div class="precio">S/ 46.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="body capucha"><span class="fav">💗</span><div class="img-box"><img src="imagenes/conjunto capucha.png"></div><h4>Body con Capucha</h4><div class="precio">S/ 30.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="pantalon deportivo"><span class="fav">💗</span><div class="img-box"><img src="imagenes/buzo.png"></div><h4>Pantalón Deportivo</h4><div class="precio">S/ 20.00</div><button>VER MÁS ></button></div>
+  </div>
+</div>
+
+<div id="accesorios" class="seccion-tab">
+  <h2 class="titulo-coleccion">Nuestros Accesorios Completos 🧸</h2><p class="sub">Accesorios tiernos para complementar la ropita.</p>
+  <div class="filtros-bar"><div class="filtros-left"><b>Filtros:</b><select><option>🎀 Baberos, Lazos, Calcetines</option></select></div><div class="buscar-box"><input id="buscadorAcc" placeholder="Buscar" onkeyup="filtrarAcc()"><span>🔍</span></div></div>
+  <div class="productos-grid" id="gridAccesorios">
+    <div class="card" data-nombre="pack baberos muselina"><span class="fav">💗</span><div class="img-box"><img src="imagenes/kit babero.png"></div><h4>Pack de 3 Baberos de Muselina</h4><div class="precio">S/ 24.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="cinta pelo lazo saten"><span class="fav">💗</span><div class="img-box"><img src="imagenes/bincha (2).png"></div><h4>Cinta para el Pelo con Lazo de Satén</h4><div class="precio">S/ 16.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="gorrito beanie tejido oso"><span class="fav">💗</span><div class="img-box"><img src="imagenes/osito.png"></div><h4>Gorrito Beanie Tejido Oso</h4><div class="precio">S/ 28.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="manoplas recien nacido"><span class="fav">💗</span><div class="img-box"><img src="imagenes/manopla.png"></div><h4>Par de Manoplas de Recién Nacido</h4><div class="precio">S/ 12.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="gorro baño toalla"><span class="fav">💗</span><div class="img-box"><img src="imagenes/gorro.png"></div><h4>Gorro de Baño de Tela Toalla</h4><div class="precio">S/ 32.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="clips chupete decorados"><span class="fav">💗</span><div class="img-box"><img src="imagenes/llave.png"></div><h4>Clips para Chupete Decorados</h4><div class="precio">S/ 18.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="pañuelos cuello patron"><span class="fav">💗</span><div class="img-box"><img src="imagenes/bandana (2).png"></div><h4>Pañuelos de Cuello con Patrón</h4><div class="precio">S/ 20.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="diadema elastica flor"><span class="fav">💗</span><div class="img-box"><img src="imagenes/lazo.png"></div><h4>Diadema Elástica con Flor</h4><div class="precio">S/ 22.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="mordedor silicona animalitos"><span class="fav">💗</span><div class="img-box"><img src="imagenes/mordedor.png"></div><h4>Mordedor de Silicona Animalitos</h4><div class="precio">S/ 25.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="peluche sonajero"><span class="fav">💗</span><div class="img-box"><img src="imagenes/modedor 2.png"></div><h4>Peluche Pequeño Sonajero</h4><div class="precio">S/ 35.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="calcetines divertidos caras"><span class="fav">💗</span><div class="img-box"><img src="imagenes/set medias.png"></div><h4>Calcetines Divertidos con Caras</h4><div class="precio">S/ 14.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="manta apego suave"><span class="fav">💗</span><div class="img-box"><img src="imagenes/manta.png"></div><h4>Manta de Apego Suave</h4><div class="precio">S/ 40.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="kit cuidado bebe cepillo"><span class="fav">💗</span><div class="img-box"><img src="imagenes/kit de aseo.png"></div><h4>Kit de Cuidado de Bebé con Cepillo</h4><div class="precio">S/ 50.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="portachupetes cochecito"><span class="fav">💗</span><div class="img-box"><img src="imagenes/chupon.png"></div><h4>Portachupetes para Cochecito</h4><div class="precio">S/ 26.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="diadema encaje tulle"><span class="fav">💗</span><div class="img-box"><img src="imagenes/moño.png"></div><h4>Diadema de Encaje y Tulle</h4><div class="precio">S/ 28.00</div><button>VER MÁS ></button></div>
+    <div class="card" data-nombre="toalla capucha animal"><span class="fav">💗</span><div class="img-box"><img src="imagenes/toalla.png"></div><h4>Toalla con Capucha de Animal</h4><div class="precio">S/ 60.00</div><button>VER MÁS ></button></div>
+  </div>
+</div>
+
+<div id="ofertas" class="seccion-tab">
+  <h2 class="titulo-coleccion">Nuestras Ofertas Imperdibles 🧸🧡</h2><p class="sub">Aprovecha descuentos exclusivos en la ropita más tierna.</p>
+  <div class="filtros-bar"><div class="filtros-left"><b>Filtros:</b><select><option>🏷️ % de Descuento</option></select><select><option>👕 Ropa</option></select><select><option>🎀 Accesorios</option></select></div><div class="buscar-box"><input id="buscadorOfer" placeholder="Buscar ofertas..." onkeyup="filtrarOfer()"><span>🔍</span></div></div>
+  <div class="productos-grid" id="gridOfertas">
+    <div class="card oferta-card" data-nombre="vestido flores"><span class="badge rebajado">¡REBAJADO!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_0_0.jpg"></div><h4>Vestido Flores</h4><div class="precio-oferta"><span class="antes">S/ 50.00</span><span class="ahora">S/ 35.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="vestido flores"><span class="badge rebajado">¡REBAJADO!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_0_1.jpg"></div><h4>Vestido Flores</h4><div class="precio-oferta"><span class="antes">S/ 50.00</span><span class="ahora">S/ 35.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="pijama ositos"><span class="badge oferta">¡OFERTA!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_0_2.jpg"></div><h4>Pijama Ositos</h4><div class="precio-oferta"><span class="antes">S/ 40.00</span><span class="ahora">S/ 28.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="conjunto rayas"><span class="fav">💗</span><div class="img-box"><img src="oferta_0_3.jpg"></div><h4>Conjunto Rayas</h4><div class="precio-oferta"><span class="ahora">S/ 31.50</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="body estrella azul"><span class="badge rebajado">¡REBAJADO!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_1_0.jpg"></div><h4>Body Estrella Azul</h4><div class="precio-oferta"><span class="ahora">S/ 26.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="body estrella azul"><span class="fav">💗</span><div class="img-box"><img src="oferta_1_1.jpg"></div><h4>Body Estrella Azul</h4><div class="precio-oferta"><span class="antes">S/ 26.00</span><span class="ahora">S/ 18.20</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="conjunto punto rosa"><span class="badge oferta">¡OFERTA!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_1_2.jpg"></div><h4>Conjunto Punto Rosa</h4><div class="precio-oferta"><span class="ahora">S/ 48.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="conjunto punto rosa"><span class="fav">💗</span><div class="img-box"><img src="oferta_1_3.jpg"></div><h4>Conjunto Punto Rosa</h4><div class="precio-oferta"><span class="ahora">S/ 33.60</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="set regalo especial"><span class="badge rebajado">¡REBAJADO!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_2_0.jpg"></div><h4>Set Regalo Especial</h4><div class="precio-oferta"><span class="ahora">S/ 115.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="set regalo body pijama"><span class="fav">💗</span><div class="img-box"><img src="oferta_2_1.jpg"></div><h4>Set Regalo Est</h4><div class="precio-oferta"><span class="ahora">S/ 95.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="conjunto deportivo oso"><span class="fav">💗</span><div class="img-box"><img src="oferta_2_2.jpg"></div><h4>Conjunto Deportivo Oso</h4><div class="precio-oferta"><span class="ahora">S/ 55.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="conjunto deportivo oso"><span class="fav">💗</span><div class="img-box"><img src="oferta_2_3.jpg"></div><h4>Conjunto Deportivo Oso</h4><div class="precio-oferta"><span class="ahora">S/ 38.50</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="pantalon deportivo"><span class="badge rebajado">¡REBAJADO!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_3_0.jpg"></div><h4>Pantalón Deportivo</h4><div class="precio-oferta"><span class="ahora">S/ 20.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="pantalon deportivo"><span class="fav">💗</span><div class="img-box"><img src="oferta_3_1.jpg"></div><h4>Pantalón Deportivo</h4><div class="precio-oferta"><span class="ahora">S/ 14.00</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="toalla capucha animal"><span class="badge oferta">¡OFERTA!</span><span class="fav">💗</span><div class="img-box"><img src="oferta_3_2.jpg"></div><h4>Toalla con Capucha</h4><div class="precio-oferta"><span class="ahora">S/ 60.00</span><span class="ultimas">¡ÚLTIMAS UNIDADES!</span></div><button>VER MÁS ></button></div>
+    <div class="card oferta-card" data-nombre="toalla capucha animal"><span class="fav">💗</span><div class="img-box"><img src="oferta_3_3.jpg"></div><h4>Toalla con Capucha</h4><div class="precio-oferta"><span class="ahora">S/ 42.00</span><span class="ultimas">¡ÚLTIMAS UNIDADES!</span></div><button>VER MÁS ></button></div>
+  </div>
+</div>
+
+<div id="nosotros" class="seccion-tab">
+  <h2 class="titulo-coleccion">Nuestra Historia - Conócenos 🧸🧡</h2>
+  <div class="nosotros-top"><div class="nosotros-texto"><h3 class="nosotros-titulo-rosa"><i>Pequeños Encantos nació del amor y la búsqueda la ropita más suave para nuestros propios hijos abrazara.</i></h3><p>Pequeños Encantos nació del amor y la búsqueda de la ropita más suave para nuestros propios hijos, para ofrecer prendas que abrazaran sus primeros momentos.</p><p>Nuestra misión es ofrecer <b>calidad, dulzura y comodidad</b> a cada familia, porque cada primer momento es único.</p></div><div class="nosotros-img-main"><img src="nosotros_main.jpg"></div></div>
+  <div class="nosotros-cards"><div class="n-card"><img src="imagenes/principal.png"><div class="n-label"><b>Calidad Artesanal</b><span>(Un mundo mon premium)</span></div></div><div class="n-card"><img src="imagenes/dibujo.png"><div class="n-label"><b>Diseño Con Corazón</b><span>(Calidad, Cuidado, de Amor)</span></div></div><div class="n-card"><img src="imagenes/familia.png"><div class="n-label"><b>Nuestra Familia</b><span>(Un sueño familiar vivo)</span></div></div></div>
+  <div class="nosotros-sueno"><div class="sueno-texto"><h3><i>Un Sueño Familiar 🧸🧡</i></h3><p>Pequeños Encantos nació del <b>amor y la búsqueda más suave</b> para nuestros propios hijos. Queríamos algo que <b>abrazara</b>.</p></div><div class="sueno-imgs"><img src="imagenes/mama.png"></div></div>
+  <div class="footer-pink"><div class="fp"><span>💗</span><p>Complementos que abrazan<br><b>sus primeros momentos 🧡</b></p></div><div class="fp"><span>🧸</span><p>Productos de calidad</p></div><div class="fp"><span>🔒</span><p>Compra segura</p></div><div class="fp"><span>🚚</span><p>Envíos rápidos</p></div><div class="fp"><span>❤️</span><p>Atención personalizada</p></div></div>
+</div>
+
+<div id="contacto" class="seccion-tab">
+  <a><h2 class="titulo-coleccion">Contáctanos y Haz tus Consultas 🧸🧡</h2></a>
+  <div class="contacto-grid">
+    <div class="contacto-izq">
+      <div class="c-card"><h4 class="c-titulo-cursiva">Nuestra Información</h4><p class="c-line"><span class="c-icon">📞</span> <span class="c-icon">💬</span> 908 997 938</p></div>
+      <div class="c-card"><h4 class="c-titulo-cursiva">Canales de Contacto</h4><p>💬 WhatsApp: 908 997 938</p><p>📘 Facebook/pequeñosencantos</p><p>📷 Instagram/pequeñosencantos</p><p>🎵 TikTok:@tiendapequeñosencantos</p></div>
+      <div class="c-card"><h4 class="c-titulo-cursiva">Horarios de Atención</h4><p><b>Lunes - Viernes</b> &nbsp; 9am - 9pm</p><p><b>Sábados</b> &nbsp; 9am - 6pm</p><p><b>Domingos</b> &nbsp; 9am - 2pm</p></div>
+      <div class="c-card"><h4 class="c-titulo-cursiva">Visítanos o Escríbenos</h4><p>Centro Comercial Oasis,<br>Puesto 249, San Juan de<br>Miraflores, Lima</p></div>
+    </div>
+    <div class="contacto-centro"><img src="imagenes/mapa.png" alt="Mapa Lima"><div class="mapa-label">Cobertura Total en<br>Lima Metropolitana</div></div>
+    <section class="seccion-visitanos">
+    <h2>¡Visítanos!</h2>
+    <p class="frase-visitanos">La mejor calidad para tu bebè</p>
+    <div class="contacto-der">
+      <div class="c-card form-card"><h4>Formulario de Contacto</h4><label>Nombre Completo</label><input type="text"><label>Correo Electrónico</label><input type="email"><label>Teléfono</label><input type="text"><label>Mensaje</label><textarea></textarea><button class="btn-enviar">ENVIAR MENSAJE</button></div>
+      <div class="c-card mama-card"><p class="mama-text">Estamos aquí para<br>ayudarte, mamá y papá</p><img src="contacto_mama.jpg"></div>
+    </div>
+  </div>
+  <div class="c-card faq-title" style="margin:20px 3% 0 3%"><h4 class="c-titulo-cursiva">Preguntas Frecuentes 🧡</h4><div class="faq-item"><span>+ Tiempos de envío?</span><b>⌄</b></div><div class="faq-item"><span>+ Tallas disponibles?</span><b>⌄</b></div><div class="faq-item"><span>+ Formas de pago?</span><b>⌄</b></div></div>
+  <div class="footer-pink"><div class="fp"><span>💗</span><p>Complementos que abrazan<br><b>sus primeros momentos 🧡</b></p></div><div class="fp"><span>🧸</span><p>Productos de calidad</p></div><div class="fp"><span>🔒</span><p>Compra segura</p></div><div class="fp"><span>🚚</span><p>Envíos rápidos</p></div><div class="fp"><span>⭐</span><p>Atención personalizada</p></div></div>
+</div>
+
+<footer class="main-footer">© 2026 Pequeños Encantos. Todos los derechos reservados. ♥</footer>
+<script>
+function mostrar(id){document.querySelectorAll('.seccion-tab').forEach(s=>s.classList.remove('activa'));document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('activo'));document.getElementById(id).classList.add('activa');document.getElementById('btn-'+id).classList.add('activo');window.scrollTo({top:0,behavior:'smooth'});}
+function filtrarProd(){let t=document.getElementById('buscadorProd').value.toLowerCase();document.querySelectorAll('#gridProductos .card').forEach(c=>{c.style.display=(c.getAttribute('data-nombre')||'').includes(t)?'block':'none';});}
+function filtrarAcc(){let t=document.getElementById('buscadorAcc').value.toLowerCase();document.querySelectorAll('#gridAccesorios .card').forEach(c=>{c.style.display=(c.getAttribute('data-nombre')||'').includes(t)?'block':'none';});}
+function filtrarOfer(){let t=document.getElementById('buscadorOfer').value.toLowerCase();document.querySelectorAll('#gridOfertas .card').forEach(c=>{c.style.display=(c.getAttribute('data-nombre')||'').includes(t)?'block':'none';});}
+</script>
+</body>
+</html>

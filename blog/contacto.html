@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Jossy - Aprende, Crece, Logra</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#" class="logo">
+            <span>Jossy ♡</span>
+            <small>APRENDE · CRECE · LOGRA</small>
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="sobre_mi.html">Sobre mí</a>
+            <a href="estudio.html">Estudios</a>
+            <a href="metas.html">Metas</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+
+        <div class="iconos">
+            <span>⌕</span>
+            <span>☾</span>
+            <span class="corazon">♡</span>
+        </div>
+    </header>
+
+    <section class="hero-contacto">
+        <div class="hero-contenido">
+            <div class="etiqueta">CONTACTO</div>
+            <h1>¡Hablemos!</h1>
+            <h2>Me encantaría saber de ti ♡</h2>
+            <p>Si tienes alguna duda, quieres compartir una idea, colaborar o simplemente saludar, no dudes en escribirme. Tu mensaje siempre será bienvenido.</p>
+        </div>
+    </section>
+
+    <main class="contacto-principal">
+
+        <section class="informacion-contacto">
+            <div class="titulo-seccion">INFORMACIÓN DE CONTACTO</div>
+
+            <div class="contacto-item">
+                <div class="contacto-icono">✉</div>
+                <div>
+                    <h3>Correo electrónico</h3>
+                    <p>vidaurrejossy21@gmail.com</p>
+                    <p>Te responderé lo antes posible.</p>
+                </div>
+            </div>
+
+            <div class="contacto-item">
+                <div class="contacto-icono">☏</div>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>+51 908997938</p>
+                    <p>Escríbeme directamente.</p>
+                </div>
+            </div>
+
+            <div class="contacto-item">
+                <div class="contacto-icono">♧</div>
+                <div>
+                    <h3>Ubicación</h3>
+                    <p>Perú</p>
+                    <p>Desde cualquier lugar del mundo, también puedes escribirme.</p>
+                </div>
+            </div>
+
+            <div class="redes">
+                <h3>Sígueme en mis redes</h3>
+                <div class="redes-enlaces">
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                    <a href="#" aria-label="Pinterest">℘</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+
+            <p class="despedida">— ¡Nos vemos por ahí! ♡ —</p>
+        </section>
+
+        <section class="formulario-contacto" id="formulario">
+            <h2>Envíame un mensaje <span></span></h2>
+            <p>Completa el formulario y te responderé lo antes posible.</p>
+
+            <form action="mailto:liz.aprendecrece@gmail.com" method="post" enctype="text/plain">
+                <div class="campos-dobles">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico *</label>
+                        <input type="email" id="correo" name="Correo" placeholder="Tu correo" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto *</label>
+                    <select id="asunto" name="Asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="Consulta">Consulta</option>
+                        <option value="Estudios">Estudios y aprendizaje</option>
+                        <option value="Colaboracion">Colaboración</option>
+                        <option value="Sugerencia">Sugerencia</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="Mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <label class="privacidad">
+                    <input type="checkbox" required>
+                    <span>Acepto la <a href="#">política de privacidad</a>.</span>
+                </label>
+
+                <button type="submit" class="boton boton-enviar">♧ &nbsp; Enviar mensaje</button>
+            </form>
+        </section>
+
+        <aside class="imagen-contacto">
+            <img src="contacto-lateral.jpg" alt="Escritorio con libros, café y cuaderno de estudio">
+            <div class="texto-imagen">
+                “Las grandes metas también comienzan con una simple conversación.”
+                <span>♡</span>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="pie">
+        <a href="#" class="logo logo-pie">
+            <span>Jossy ♡</span>
+            <small>APRENDE · CRECE · LOGRA</small>
+        </a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="estudios.html">Estudios</a>
+            <a href="metas.html">Metas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <p class="frase-pie">Todo esfuerzo<br>siempre vale la pena ♡</p>
+
+        <div class="redes-pie">
+            <a href="#">◎</a>
+            <a href="#">▶</a>
+            <a href="#">℘</a>
+            <a href="#">in</a>
+            <p>© 2025 Jossy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
